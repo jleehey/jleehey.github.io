@@ -5,7 +5,7 @@ description: ""
 tags: android architecture components kotlin viewmodel
 ---
 
-I recently ran into a problem with mapping one livedata object to another with an asynchronous dependency.  I wanted to translate a livedata `Order` API response into a view state String.  Normally, this is easily done with something like this:
+I recently ran into a problem with mapping one LiveData object to another with an asynchronous dependency.  I wanted to translate a LiveData `Order` API response into a view state String.  Normally, this is easily done with something like this:
 
 ```kotlin
 data class OrderResponse(val total: Double)
@@ -16,7 +16,7 @@ val orderViewState = Transformations.map(Repo.orderResponseLiveData) {
 }
 ```
 
-The issue comes when we want to use a locale that we fetch from a location on the server.  Let's simplify the problem as the following:
+The issue comes when we want to use a Locale that we fetch from a location server-side.  Let's simplify the problem as the following:
 ```kotlin
 suspend fun getLocale()
 
@@ -68,4 +68,4 @@ class OrderViewModel : ViewModel() {
 }
 ```
 
-By delaying the addition of the view state source until the assignment of the `currencyFormat` is complete, we can guarantee that all necessary objects are available from the target context.  By initializing the LiveData with an empty `MediatorLiveData`, we can guarantee that the observer won't throw an exception and is free to call `viewModel.orderViewState.observe()` at any time.
+By delaying the addition of the MediatorLiveData source until the assignment of the `currencyFormat` is complete, we can guarantee that all necessary objects are available from the target context.  By initializing the LiveData with an empty `MediatorLiveData`, we can guarantee that the observer won't throw an exception and is free to call `viewModel.orderViewState.observe()` at any time.
