@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Transforming Livedata with asynchronous dependencies"
-description: ""
+title: "Transforming LiveData with asynchronous dependencies"
+description: "What to do when our ViewModel LiveData relies on an asynchronous method's value."
 tags: android architecture components kotlin viewmodel
 ---
 
