@@ -1,7 +1,7 @@
 :root{--bg:#f7f7fb;--accent:#0b6efd;--muted:#666}
 *{box-sizing:border-box}body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
 .container{max-width:900px;margin:0 auto;padding:24px}
-.hero{background:white;padding:40px 0;border-bottom:4px solid #eee}
+.hero{background:white;padding:28px 0 12px;border-bottom:4px solid #eee}
 .hero h1{margin:0;font-size:28px}
 .date{color:var(--muted);margin-top:8px}
 .cta a{color:var(--accent);text-decoration:none}
