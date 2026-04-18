@@ -1,0 +1,12 @@
+:root{--bg:#f7f7fb;--accent:#0b6efd;--muted:#666}
+*{box-sizing:border-box}body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
+.container{max-width:900px;margin:0 auto;padding:24px}
+.hero{background:white;padding:40px 0;border-bottom:4px solid #eee}
+.hero h1{margin:0;font-size:28px}
+.date{color:var(--muted);margin-top:8px}
+.cta a{color:var(--accent);text-decoration:none}
+section{background:white;margin:18px 0;padding:18px;border-radius:8px}
+section h2{margin-top:0}
+pre{background:#f1f3f5;padding:12px;border-radius:6px;overflow:auto}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:12px}
+@media (max-width:600px){.hero h1{font-size:22px;padding:0 12px}.container{padding:12px}}
